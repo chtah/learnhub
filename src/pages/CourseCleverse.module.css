@@ -1,0 +1,17 @@
+.content {
+  height: 90vh;
+}
+
+.contentTitle {
+  text-align: center;
+  padding: 0 0 10px 0;
+}
+
+.videoContent {
+  text-align: center;
+}
+.videoContent iframe {
+  height: 80vh; /* Set height to 100% of the viewport height */
+  width: 70vw; /* Set width to 100% of the viewport width */
+  border: none; /* Remove default border */
+}
