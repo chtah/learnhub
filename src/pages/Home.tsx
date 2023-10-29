@@ -14,6 +14,7 @@ const Home = () => {
               <div className={classes.cardTextUp}>
                 <p className={classes.projectName}>Cleverse</p>
                 <p className={classes.description}>Live Records</p>
+                <p className={classes.description}>Update 27-Oct-2023</p>
               </div>
             </div>
           </div>
@@ -25,7 +26,7 @@ const Home = () => {
             <div className={classes.cardText}>
               <div className={classes.cardTextUp}>
                 <p className={classes.projectName}>React Hands On By React ไปวันๆ</p>
-                <p className={classes.description}>Learn react hook and another tools</p>
+                <p className={classes.description}>Learn react hooks and another tools</p>
               </div>
             </div>
           </div>

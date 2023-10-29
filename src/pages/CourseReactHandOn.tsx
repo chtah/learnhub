@@ -146,7 +146,7 @@ const CourseReactHandOn = () => {
         <Sider width={400} className={classes.sider}>
           <Menu mode="inline" onClick={(e) => setSelectedMenuItem(e.key)} style={{ height: '100%', borderRight: 0 }}>
             <Menu.Item key="document">Document</Menu.Item>
-            <Menu.SubMenu title="Live Records">
+            <Menu.SubMenu title="Live Records" key="liverecords">
               <Menu.Item key="item1">React Hands On</Menu.Item>
               <Menu.Item key="item2">The World of React Hooks</Menu.Item>
               <Menu.Item key="item3">React on the Server</Menu.Item>
