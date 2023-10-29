@@ -7,6 +7,12 @@
   padding: 0 0 10px 0;
 }
 
+.documentContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .videoContent {
   text-align: center;
 }

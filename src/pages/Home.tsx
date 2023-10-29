@@ -1,5 +1,6 @@
 import classes from './Home.module.css'
 import cleverse_card from '../assets/course_card_cleverse.png'
+import reactHandsOn_card from '../assets/course_card_react-hands-on.png'
 import { Link } from 'react-router-dom'
 
 const Home = () => {
@@ -12,7 +13,19 @@ const Home = () => {
             <div className={classes.cardText}>
               <div className={classes.cardTextUp}>
                 <p className={classes.projectName}>Cleverse</p>
-                <p className={classes.description}>Learn full stack developer</p>
+                <p className={classes.description}>Live Records</p>
+              </div>
+            </div>
+          </div>
+        </Link>
+
+        <Link to={`/course/react-hands-on`}>
+          <div className={classes.card}>
+            <img className={classes.image} src={reactHandsOn_card} />
+            <div className={classes.cardText}>
+              <div className={classes.cardTextUp}>
+                <p className={classes.projectName}>React Hands On By React ไปวันๆ</p>
+                <p className={classes.description}>Learn react hook and another tools</p>
               </div>
             </div>
           </div>
