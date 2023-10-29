@@ -1,6 +1,7 @@
 import { Layout, Menu } from 'antd'
 import classes from './CourseCleverse.module.css'
 import { useState } from 'react'
+import cleverse_logo from '../assets/cleverse_logo.png'
 
 const { Sider, Content } = Layout
 
@@ -11,9 +12,11 @@ const CourseCleverse = () => {
     switch (key) {
       case 'item0':
         return (
-          <div className={classes.videoContent}>
-            <h1>Welcome</h1>
+          <div className={classes.landingContent}>
+            <h1>Cleverse Academy Live Records</h1>
+            <h2>Update 27-October-2023</h2>
             <p>Full Screen by right click on video and selected -Show all controls-</p>
+            <img src={cleverse_logo} />
           </div>
         )
 
@@ -578,7 +581,7 @@ const CourseCleverse = () => {
   return (
     <div>
       <Layout>
-        <Sider width={280} className={classes.sider}>
+        <Sider width={'20vw'} className={classes.sider}>
           <Menu mode="inline" onClick={(e) => setSelectedMenuItem(e.key)} style={{ height: '100%', borderRight: 0 }}>
             <Menu.SubMenu title="Week 1" key="week1">
               <Menu.SubMenu title="11-SEP" key="11sep">

@@ -59,7 +59,7 @@
 }
 
 .projectName {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 500;
   padding: 15px 15px;
 }
@@ -70,17 +70,35 @@
   padding: 0 15px;
 }
 
-.cardTextDown {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px;
-  font-size: 12px;
-}
-
 .card:hover {
   box-shadow: 0 0 10px 5px rgb(0 0 0 / 0.1);
 }
 
 @media only screen and (max-width: 600px) {
   /* For mobile: */
+
+  .container {
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0px;
+  }
+
+  .projectName {
+    font-size: 2.2vw;
+  }
+
+  .description {
+    font-size: 2vw;
+  }
+
+  .card {
+    width: 40vw;
+    min-width: 0px;
+    /*box-shadow: 0 0 10px 5px rgb(0 0 0 / 0.1);*/
+  }
+
+  .image {
+    width: 40vw;
+    min-width: 0px;
+  }
 }

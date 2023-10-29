@@ -5,7 +5,7 @@ import { useState } from 'react'
 const { Sider, Content } = Layout
 
 const CourseReactHandOn = () => {
-  const [selectedMenuItem, setSelectedMenuItem] = useState('item0')
+  const [selectedMenuItem, setSelectedMenuItem] = useState('document')
 
   const componentSwitch = (key: string) => {
     switch (key) {
