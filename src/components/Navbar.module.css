@@ -48,3 +48,27 @@
 .inActive:hover {
   cursor: pointer;
 }
+
+@media only screen and (max-width: 600px) {
+  /* For mobile: */
+
+  .nav {
+    height: 8vh;
+    /*background-color: #15161f;*/
+    padding: 0px 20px;
+  }
+
+  .navRight {
+    gap: 20px;
+
+    color: #b4b8c6;
+    font-weight: 700;
+    font-size: 3vw;
+  }
+
+  .logoName {
+    color: #4e9aff;
+    font-weight: 900;
+    font-size: 4vw;
+  }
+}

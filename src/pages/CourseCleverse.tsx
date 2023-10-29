@@ -1,6 +1,7 @@
 import { Layout, Menu } from 'antd'
 import classes from './CourseCleverse.module.css'
 import { useState } from 'react'
+import cleverse_logo from '../assets/cleverse_logo.png'
 
 const { Sider, Content } = Layout
 
@@ -11,9 +12,11 @@ const CourseCleverse = () => {
     switch (key) {
       case 'item0':
         return (
-          <div className={classes.videoContent}>
-            <h1>Welcome</h1>
+          <div className={classes.landingContent}>
+            <h1>Cleverse Academy Live Records</h1>
+            <h2>Update 27-October-2023</h2>
             <p>Full Screen by right click on video and selected -Show all controls-</p>
+            <img src={cleverse_logo} />
           </div>
         )
 
@@ -578,24 +581,24 @@ const CourseCleverse = () => {
   return (
     <div>
       <Layout>
-        <Sider width={280} className={classes.sider}>
+        <Sider width={'20vw'} className={classes.sider}>
           <Menu mode="inline" onClick={(e) => setSelectedMenuItem(e.key)} style={{ height: '100%', borderRight: 0 }}>
-            <Menu.SubMenu title="Week 1">
-              <Menu.SubMenu title="11-SEP">
+            <Menu.SubMenu title="Week 1" key="week1">
+              <Menu.SubMenu title="11-SEP" key="11sep">
                 <Menu.Item key="11sepaft">Afternoon</Menu.Item>
               </Menu.SubMenu>
-              <Menu.SubMenu title="12-SEP">
+              <Menu.SubMenu title="12-SEP" key="12sep">
                 <Menu.Item key="12sepmor">Morning</Menu.Item>
                 <Menu.Item key="12sepaft">Afternoon</Menu.Item>
               </Menu.SubMenu>
-              <Menu.SubMenu title="13-SEP">
+              <Menu.SubMenu title="13-SEP" key="13sep">
                 <Menu.Item key="13sepaft">Afternoon</Menu.Item>
               </Menu.SubMenu>
-              <Menu.SubMenu title="14-SEP">
+              <Menu.SubMenu title="14-SEP" key="14sep">
                 <Menu.Item key="14sepmor">Morning</Menu.Item>
                 <Menu.Item key="14sepaft">Afternoon</Menu.Item>
               </Menu.SubMenu>
-              <Menu.SubMenu title="15-SEP">
+              <Menu.SubMenu title="15-SEP" key="15sep">
                 <Menu.Item key="15sep1">Part 1 - No.6 Solution</Menu.Item>
                 <Menu.Item key="15sep2">Part 2 - No.12 Solution</Menu.Item>
                 <Menu.Item key="15sep3">Part 3 - No.14 Solution</Menu.Item>
@@ -605,114 +608,114 @@ const CourseCleverse = () => {
               </Menu.SubMenu>
             </Menu.SubMenu>
 
-            <Menu.SubMenu title="Week 2">
-              <Menu.SubMenu title="18-SEP">
+            <Menu.SubMenu title="Week 2" key="week2">
+              <Menu.SubMenu title="18-SEP" key="18sep">
                 <Menu.Item key="18sepmor">Morning</Menu.Item>
                 <Menu.Item key="18sepaft">Afternoon</Menu.Item>
               </Menu.SubMenu>
-              <Menu.SubMenu title="19-SEP">
+              <Menu.SubMenu title="19-SEP" key="19sep">
                 <Menu.Item key="19sepmor">Morning</Menu.Item>
                 <Menu.Item key="19sepaft">Afternoon</Menu.Item>
               </Menu.SubMenu>
-              <Menu.SubMenu title="20-SEP">
+              <Menu.SubMenu title="20-SEP" key="20sep">
                 <Menu.Item key="20sepaft">Afternoon</Menu.Item>
               </Menu.SubMenu>
-              <Menu.SubMenu title="21-SEP">
+              <Menu.SubMenu title="21-SEP" key="21sep">
                 <Menu.Item key="21sepmor">Morning</Menu.Item>
                 <Menu.Item key="21sepaft">Afternoon</Menu.Item>
               </Menu.SubMenu>
-              <Menu.SubMenu title="22-SEP">
+              <Menu.SubMenu title="22-SEP" key="22sep">
                 <Menu.Item key="22sepmor">Morning</Menu.Item>
                 <Menu.Item key="22sepaft">Afternoon</Menu.Item>
               </Menu.SubMenu>
             </Menu.SubMenu>
 
-            <Menu.SubMenu title="Week 3">
-              <Menu.SubMenu title="25-SEP">
+            <Menu.SubMenu title="Week 3" key="week3">
+              <Menu.SubMenu title="25-SEP" key="25sep">
                 <Menu.Item key="25sepmor">Morning</Menu.Item>
                 <Menu.Item key="25sepaft">Afternoon</Menu.Item>
               </Menu.SubMenu>
-              <Menu.SubMenu title="26-SEP">
+              <Menu.SubMenu title="26-SEP" key="26sep">
                 <Menu.Item key="26sepmor">Morning</Menu.Item>
                 <Menu.Item key="26sepaft">Afternoon</Menu.Item>
               </Menu.SubMenu>
-              <Menu.SubMenu title="27-SEP">
+              <Menu.SubMenu title="27-SEP" key="27sep">
                 <Menu.Item key="27sepaft">Afternoon</Menu.Item>
               </Menu.SubMenu>
-              <Menu.SubMenu title="28-SEP">
+              <Menu.SubMenu title="28-SEP" key="28sep">
                 <Menu.Item key="28sepaft1">Afternoon - 1</Menu.Item>
                 <Menu.Item key="28sepaft2">Afternoon - 2</Menu.Item>
               </Menu.SubMenu>
-              <Menu.SubMenu title="29-SEP">
+              <Menu.SubMenu title="29-SEP" key="29sep">
                 <Menu.Item key="29sepmor">Morning</Menu.Item>
                 <Menu.Item key="29sepaft">Afternoon</Menu.Item>
               </Menu.SubMenu>
             </Menu.SubMenu>
 
-            <Menu.SubMenu title="Week 4">
-              <Menu.SubMenu title="2-OCT">
+            <Menu.SubMenu title="Week 4" key="week4">
+              <Menu.SubMenu title="2-OCT" key="2oct">
                 <Menu.Item key="2octmor">Morning</Menu.Item>
                 <Menu.Item key="2octaft">Afternoon</Menu.Item>
               </Menu.SubMenu>
-              <Menu.SubMenu title="3-OCT">
+              <Menu.SubMenu title="3-OCT" key="3oct">
                 <Menu.Item key="3octmor">Morning</Menu.Item>
                 <Menu.Item key="3octaft">Afternoon</Menu.Item>
               </Menu.SubMenu>
-              <Menu.SubMenu title="4-OCT">
+              <Menu.SubMenu title="4-OCT" key="4oct">
                 <Menu.Item key="4octaft">Afternoon</Menu.Item>
               </Menu.SubMenu>
-              <Menu.SubMenu title="5-OCT">
+              <Menu.SubMenu title="5-OCT" key="5oct">
                 <Menu.Item key="5octmor">Morning</Menu.Item>
                 <Menu.Item key="5octaft">Afternoon</Menu.Item>
               </Menu.SubMenu>
-              <Menu.SubMenu title="6-OCT">
+              <Menu.SubMenu title="6-OCT" key="6oct">
                 <Menu.Item key="6octmor">Morning</Menu.Item>
                 <Menu.Item key="6octaft">Afternoon</Menu.Item>
               </Menu.SubMenu>
             </Menu.SubMenu>
 
-            <Menu.SubMenu title="Week 6">
-              <Menu.SubMenu title="16-OCT">
+            <Menu.SubMenu title="Week 6" key="week6">
+              <Menu.SubMenu title="16-OCT" key="16oct">
                 <Menu.Item key="16octmor">Morning</Menu.Item>
                 <Menu.Item key="16octaft">Afternoon</Menu.Item>
               </Menu.SubMenu>
-              <Menu.SubMenu title="17-OCT">
+              <Menu.SubMenu title="17-OCT" key="17oct">
                 <Menu.Item key="17octmor">Morning</Menu.Item>
                 <Menu.Item key="17octaft">Afternoon</Menu.Item>
               </Menu.SubMenu>
-              <Menu.SubMenu title="18-OCT">
+              <Menu.SubMenu title="18-OCT" key="18oct">
                 <Menu.Item key="18octaft">Afternoon</Menu.Item>
               </Menu.SubMenu>
-              <Menu.SubMenu title="19-OCT">
-                <Menu.Item key="20octmor">Morning</Menu.Item>
+              <Menu.SubMenu title="19-OCT" key="19oct">
+                <Menu.Item key="19octmor">Morning</Menu.Item>
               </Menu.SubMenu>
-              <Menu.SubMenu title="20-OCT">
-                <Menu.Item key="16octmor">Morning</Menu.Item>
-                <Menu.Item key="16octaft">Afternoon</Menu.Item>
+              <Menu.SubMenu title="20-OCT" key="20oct">
+                <Menu.Item key="20octmor">Morning</Menu.Item>
+                <Menu.Item key="20octaft">Afternoon</Menu.Item>
               </Menu.SubMenu>
             </Menu.SubMenu>
 
-            <Menu.SubMenu title="Week 7">
-              <Menu.SubMenu title="24-OCT">
+            <Menu.SubMenu title="Week 7" key="week7">
+              <Menu.SubMenu title="24-OCT" key="24oct">
                 <Menu.Item key="24octmor">Morning</Menu.Item>
                 <Menu.Item key="24octaft">Afternoon</Menu.Item>
               </Menu.SubMenu>
-              <Menu.SubMenu title="25-OCT">
+              <Menu.SubMenu title="25-OCT" key="25oct">
                 <Menu.Item key="25octaft">Afternoon</Menu.Item>
               </Menu.SubMenu>
-              <Menu.SubMenu title="26-OCT">
+              <Menu.SubMenu title="26-OCT" key="26oct">
                 <Menu.Item key="26octmor1">Morning - 1</Menu.Item>
                 <Menu.Item key="26octmor2">Morning - 2</Menu.Item>
                 <Menu.Item key="26octaft1">Afternoon - 1</Menu.Item>
                 <Menu.Item key="26octaft2">Afternoon - 2</Menu.Item>
               </Menu.SubMenu>
-              <Menu.SubMenu title="27-OCT">
+              <Menu.SubMenu title="27-OCT" key="27oct">
                 <Menu.Item key="27octmor">Morning</Menu.Item>
                 <Menu.Item key="27octaft">Afternoon</Menu.Item>
               </Menu.SubMenu>
             </Menu.SubMenu>
 
-            <Menu.SubMenu title="Industry Talk">
+            <Menu.SubMenu title="Industry Talk" key="industryTalk">
               <Menu.Item key="industrytalk1">Industry Talk 1 - By Prem (Cleverse)</Menu.Item>
               <Menu.Item key="industrytalk2">Industry Talk 2 - By Wichai (Wisesight)</Menu.Item>
               <Menu.Item key="industrytalk3">
