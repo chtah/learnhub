@@ -1,6 +1,7 @@
 import { Layout, Menu } from 'antd'
 import classes from './CourseReactHandOn.module.css'
-import { useState } from 'react'
+import React, { useState } from 'react'
+import { PlayCircleOutlined, FileOutlined } from '@ant-design/icons'
 
 const { Sider, Content } = Layout
 
@@ -85,7 +86,7 @@ const CourseReactHandOn = () => {
                 </a>
               </p>
               <p>
-                🚀 Open for contributors&nbsp;
+                👩‍💻&nbsp;
                 <a href="https://github.com/siriwatknp/joy-treasury/" target="_blank" rel="noreferrer noopener">
                   https://github.com/siriwatknp/joy-treasury/
                 </a>
@@ -143,10 +144,12 @@ const CourseReactHandOn = () => {
   return (
     <div>
       <Layout>
-        <Sider width={400} className={classes.sider}>
+        <Sider width={'20vW'} className={classes.sider} breakpoint="md">
           <Menu mode="inline" onClick={(e) => setSelectedMenuItem(e.key)} style={{ height: '100%', borderRight: 0 }}>
-            <Menu.Item key="document">Document</Menu.Item>
-            <Menu.SubMenu title="Live Records" key="liverecords">
+            <Menu.Item key="document" icon={React.createElement(FileOutlined)}>
+              Document
+            </Menu.Item>
+            <Menu.SubMenu title="Live Records" key="liverecords" icon={React.createElement(PlayCircleOutlined)}>
               <Menu.Item key="item1">React Hands On</Menu.Item>
               <Menu.Item key="item2">The World of React Hooks</Menu.Item>
               <Menu.Item key="item3">React on the Server</Menu.Item>

@@ -25,3 +25,24 @@
   width: 60vw; /* Set width to 100% of the viewport width */
   border: none; /* Remove default border */
 }
+
+.sider img {
+  width: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+  /* For mobile: */
+  .documentContent {
+    gap: 10px;
+    border-radius: 25px;
+    padding: 30px;
+  }
+
+  .documentContent h1 {
+    font-size: 20px;
+  }
+
+  .documentContent p {
+    font-size: 10px;
+  }
+}

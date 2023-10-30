@@ -581,8 +581,12 @@ const CourseCleverse = () => {
   return (
     <div>
       <Layout>
-        <Sider width={'20vw'} className={classes.sider}>
-          <Menu mode="inline" onClick={(e) => setSelectedMenuItem(e.key)} style={{ height: '100%', borderRight: 0 }}>
+        <Sider width={'20vw'} className={classes.sider} breakpoint="md">
+          <Menu
+            mode="inline"
+            onClick={(e) => setSelectedMenuItem(e.key)}
+            style={{ height: '100%', borderRight: 0, fontSize: '1.2vw' }}
+          >
             <Menu.SubMenu title="Week 1" key="week1">
               <Menu.SubMenu title="11-SEP" key="11sep">
                 <Menu.Item key="11sepaft">Afternoon</Menu.Item>

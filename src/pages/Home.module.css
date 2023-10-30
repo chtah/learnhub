@@ -7,7 +7,7 @@
   display: flex;
   gap: 40px;
   flex-wrap: wrap;
-  padding: 50px 50px;
+  padding: 30px;
 }
 
 .card {
@@ -100,5 +100,19 @@
   .image {
     width: 40vw;
     min-width: 0px;
+  }
+
+  .card .ButtonloginRequired {
+    top: 5px;
+    right: 5px;
+    width: 50px;
+    font-size: 6px;
+  }
+
+  .card .lockIconActive {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 12px;
   }
 }

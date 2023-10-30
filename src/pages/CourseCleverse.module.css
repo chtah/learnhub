@@ -10,6 +10,7 @@
 .videoContent {
   text-align: center;
 }
+
 .videoContent iframe {
   height: 70vh; /* Set height to 100% of the viewport height */
   width: 60vw; /* Set width to 100% of the viewport width */
@@ -38,6 +39,20 @@
   /* For mobile: */
 
   .landingContent img {
-    width: 35vw;
+    gap: 10px;
+    border-radius: 25px;
+    padding: 30px;
+  }
+
+  .landingContent h1 {
+    font-size: 20px;
+  }
+
+  .landingContent h2 {
+    font-size: 15px;
+  }
+
+  .landingContent p {
+    font-size: 10px;
   }
 }
