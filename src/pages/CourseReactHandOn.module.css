@@ -1,7 +1,4 @@
 .content {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
   height: 90vh;
 }
 
@@ -10,13 +7,22 @@
   padding: 0 0 10px 0;
 }
 
+.documentContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  background-color: #ffffff;
+  border-radius: 30px;
+  padding: 40px;
+}
+
 .videoContent {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 6px;
 }
-
 .videoContent iframe {
   height: 70vh; /* Set height to 100% of the viewport height */
   width: 60vw; /* Set width to 100% of the viewport width */
@@ -32,24 +38,6 @@
   bottom: 0;
   left: 0;
   border: 0;
-}
-
-.landingContent {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  text-align: center;
-
-  background-color: #ffffff;
-  border-radius: 30px;
-  padding: 40px;
-}
-
-.landingContent img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 25vw;
 }
 
 .videoContent .fullScreenButton {
@@ -82,24 +70,19 @@
   display: none;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 600px) {
   /* For mobile: */
-
-  .landingContent img {
+  .documentContent {
     gap: 10px;
     border-radius: 25px;
     padding: 30px;
   }
 
-  .landingContent h1 {
+  .documentContent h1 {
     font-size: 20px;
   }
 
-  .landingContent h2 {
-    font-size: 15px;
-  }
-
-  .landingContent p {
+  .documentContent p {
     font-size: 10px;
   }
 }
