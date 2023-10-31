@@ -1,12 +1,34 @@
 import { Layout, Menu } from 'antd'
 import classes from './CourseReactHandOn.module.css'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { PlayCircleOutlined, FileOutlined } from '@ant-design/icons'
 
 const { Sider, Content } = Layout
 
 const CourseReactHandOn = () => {
   const [selectedMenuItem, setSelectedMenuItem] = useState('document')
+  const [isFullScreen, setFullScreen] = useState(false)
+
+  const handlerFullScreen = () => {
+    return setFullScreen(true)
+  }
+
+  const handlerExitFullScreen = () => {
+    return setFullScreen(false)
+  }
+
+  useEffect(() => {
+    const handleEsc = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setFullScreen(false)
+      }
+    }
+    window.addEventListener('keydown', handleEsc)
+
+    return () => {
+      window.removeEventListener('keydown', handleEsc)
+    }
+  }, [])
 
   const componentSwitch = (key: string) => {
     switch (key) {
@@ -118,21 +140,60 @@ const CourseReactHandOn = () => {
       case 'item1':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0wObA-MM9-0-iPag?e=cbEeJa" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgb0wObA-MM9-0-iPag?e=cbEeJa"
+              allowFullScreen
+            ></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
           </div>
         )
 
       case 'item2':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0xdLxAPWLUYYeEhg?e=JrsGOj" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgb0xdLxAPWLUYYeEhg?e=JrsGOj"
+              allowFullScreen
+            ></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
           </div>
         )
 
       case 'item3':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0yoxkt9Lp7GZ1rDg?e=PZg8kQ" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgb0yoxkt9Lp7GZ1rDg?e=PZg8kQ"
+              allowFullScreen
+            ></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
           </div>
         )
 

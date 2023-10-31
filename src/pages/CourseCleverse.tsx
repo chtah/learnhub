@@ -75,7 +75,11 @@ const CourseCleverse = () => {
       case '12sepmor':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgbxoMCPYOMJoOWrdUQ?e=RVFfya" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgbxoMCPYOMJoOWrdUQ?e=RVFfya"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -95,7 +99,11 @@ const CourseCleverse = () => {
       case '12sepaft':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgbxqkVWBn-HRRUuKKQ?e=PRCPhu" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgbxqkVWBn-HRRUuKKQ?e=PRCPhu"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -115,7 +123,11 @@ const CourseCleverse = () => {
       case '13sepaft':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgbxv6uRZq9WtyuwjwA?e=tcoexJ" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgbxv6uRZq9WtyuwjwA?e=tcoexJ"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -132,7 +144,11 @@ const CourseCleverse = () => {
       case '14sepmor':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgbxrxJE-s3uZc8N7yQ?e=WZmajJ" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgbxrxJE-s3uZc8N7yQ?e=WZmajJ"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -151,7 +167,11 @@ const CourseCleverse = () => {
       case '14sepaft':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgbxsamwAr48tBnmISw?e=ePdFUK" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgbxsamwAr48tBnmISw?e=ePdFUK"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -170,7 +190,11 @@ const CourseCleverse = () => {
       case '15sep1':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgbxuT-irNx6edWACCA?e=nJEk7J" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgbxuT-irNx6edWACCA?e=nJEk7J"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -187,7 +211,11 @@ const CourseCleverse = () => {
       case '15sep2':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgbxtMKqHwgnlVwgAyQ?e=KnVcM7" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgbxtMKqHwgnlVwgAyQ?e=KnVcM7"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -204,7 +232,11 @@ const CourseCleverse = () => {
       case '15sep3':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgbxxcFixOe0NcN3SiQ?e=5xMWbh" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgbxxcFixOe0NcN3SiQ?e=5xMWbh"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -221,7 +253,11 @@ const CourseCleverse = () => {
       case '15sep4':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgbxwjEdpvH4mri_coA?e=dMKHNB" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgbxwjEdpvH4mri_coA?e=dMKHNB"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -238,7 +274,11 @@ const CourseCleverse = () => {
       case '15sep5':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgbxy9XUGHZB9HxjqpA?e=QR14Op" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgbxy9XUGHZB9HxjqpA?e=QR14Op"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -255,7 +295,11 @@ const CourseCleverse = () => {
       case '15sep6':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgbxz1QxmcFX7e-Pvgw?e=aSvjMP" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgbxz1QxmcFX7e-Pvgw?e=aSvjMP"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -274,7 +318,11 @@ const CourseCleverse = () => {
       case '18sepmor':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgbxfoixuweNVOjeWcw?e=pHb8Gp" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgbxfoixuweNVOjeWcw?e=pHb8Gp"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -293,7 +341,11 @@ const CourseCleverse = () => {
       case '18sepaft':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgbxisZlr5DsUfP76jw?e=eszy2s" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgbxisZlr5DsUfP76jw?e=eszy2s"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -312,7 +364,11 @@ const CourseCleverse = () => {
       case '19sepmor':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgbxgbOkSLtu_xseDEg?e=6kRgdd" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgbxgbOkSLtu_xseDEg?e=6kRgdd"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -329,7 +385,11 @@ const CourseCleverse = () => {
       case '19sepaft':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgbxhGJFknAHtMaldyw?e=yJCG6U" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgbxhGJFknAHtMaldyw?e=yJCG6U"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -346,7 +406,11 @@ const CourseCleverse = () => {
       case '20sepaft':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgbxkQwpzytdbMiSd8w?e=GARTnv" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgbxkQwpzytdbMiSd8w?e=GARTnv"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -363,7 +427,11 @@ const CourseCleverse = () => {
       case '21sepmor':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgbxlIiLXYzbsxo9vyg?e=RT0mmf" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgbxlIiLXYzbsxo9vyg?e=RT0mmf"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -380,7 +448,11 @@ const CourseCleverse = () => {
       case '21sepaft':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgbxjpXXrbNoo4X2wlg?e=gCeimt" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgbxjpXXrbNoo4X2wlg?e=gCeimt"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -397,7 +469,11 @@ const CourseCleverse = () => {
       case '22sepmor':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgbxmnpR6pJZ94K6cHA?e=cobibo" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgbxmnpR6pJZ94K6cHA?e=cobibo"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -417,7 +493,11 @@ const CourseCleverse = () => {
       case '22sepaft':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgbxn-pmffEEevfYEwg?e=K1cZBI" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgbxn-pmffEEevfYEwg?e=K1cZBI"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -439,7 +519,11 @@ const CourseCleverse = () => {
       case '25sepmor':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0U7IslUhbMpELIBA?e=BHFT2P" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgb0U7IslUhbMpELIBA?e=BHFT2P"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -456,7 +540,11 @@ const CourseCleverse = () => {
       case '25sepaft':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0TYBtRLIwItQA9xw?e=y17G7S" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgb0TYBtRLIwItQA9xw?e=y17G7S"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -473,7 +561,11 @@ const CourseCleverse = () => {
       case '26sepmor':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0VYJKOaW7fi75YgA?e=srG70A" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgb0VYJKOaW7fi75YgA?e=srG70A"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -490,7 +582,11 @@ const CourseCleverse = () => {
       case '26sepaft':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0WAa-9sPl5odONyA?e=D0hr0V" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgb0WAa-9sPl5odONyA?e=D0hr0V"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -507,7 +603,11 @@ const CourseCleverse = () => {
       case '27sepaft':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0Xp23SujwrdIcKPQ?e=BIqmwa" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgb0Xp23SujwrdIcKPQ?e=BIqmwa"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -524,7 +624,11 @@ const CourseCleverse = () => {
       case '28sepaft1':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0ZH0JZqNOWc9clHw?e=LFtVDd" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgb0ZH0JZqNOWc9clHw?e=LFtVDd"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -541,7 +645,11 @@ const CourseCleverse = () => {
       case '28sepaft2':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0YyaSHV78bPche3Q?e=UWGh2J" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgb0YyaSHV78bPche3Q?e=UWGh2J"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -558,7 +666,11 @@ const CourseCleverse = () => {
       case '29sepmor':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0ag7166P0l2wWTsA?e=RkklXv" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgb0ag7166P0l2wWTsA?e=RkklXv"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -579,7 +691,11 @@ const CourseCleverse = () => {
       case '29sepaft':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0cg4Z9-TbYqR6N7w?e=QTwGT5" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgb0cg4Z9-TbYqR6N7w?e=QTwGT5"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -602,7 +718,11 @@ const CourseCleverse = () => {
       case '2octmor':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0barJcNVJNAjOzdg?e=iBnXjB" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgb0barJcNVJNAjOzdg?e=iBnXjB"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -619,7 +739,11 @@ const CourseCleverse = () => {
       case '2octaft':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0dsDawZXOYyA7YvA?e=nPTr1k" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgb0dsDawZXOYyA7YvA?e=nPTr1k"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -636,7 +760,11 @@ const CourseCleverse = () => {
       case '3octmor':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0eYN6KTjYmPYsCAQ?e=8zTBNa" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgb0eYN6KTjYmPYsCAQ?e=8zTBNa"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -653,7 +781,11 @@ const CourseCleverse = () => {
       case '3octaft':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0fCyOWlixRSO872g?e=Y58l2D" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgb0fCyOWlixRSO872g?e=Y58l2D"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -670,7 +802,11 @@ const CourseCleverse = () => {
       case '4octaft':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0gp5Rj-BQsdRpT8g?e=ZJoAVg" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgb0gp5Rj-BQsdRpT8g?e=ZJoAVg"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -687,7 +823,11 @@ const CourseCleverse = () => {
       case '5octmor':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0hKxmAweJuabiAUA?e=TTux2N" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgb0hKxmAweJuabiAUA?e=TTux2N"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -704,7 +844,11 @@ const CourseCleverse = () => {
       case '5octaft':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0j1Mv91IZCKX5veA?e=684BCH" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgb0j1Mv91IZCKX5veA?e=684BCH"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -721,7 +865,11 @@ const CourseCleverse = () => {
       case '6octmor':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0i6u-qcyDwoUFTNA?e=hGdtuo" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgb0i6u-qcyDwoUFTNA?e=hGdtuo"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -738,7 +886,11 @@ const CourseCleverse = () => {
       case '6octaft':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0knFPux9cATkNLQQ?e=KMZi11" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgb0knFPux9cATkNLQQ?e=KMZi11"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -757,7 +909,11 @@ const CourseCleverse = () => {
       case '16octmor':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb00ZjbZue4YNpID9g?e=163VF1" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgb00ZjbZue4YNpID9g?e=163VF1"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -777,7 +933,11 @@ const CourseCleverse = () => {
       case '16octaft':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0BmT6p6PCJ5hid6Q?e=B8wbmZ" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgb0BmT6p6PCJ5hid6Q?e=B8wbmZ"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -797,7 +957,11 @@ const CourseCleverse = () => {
       case '17octmor':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb03DsrYfbSIBk8Stw?e=1g90nN" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgb03DsrYfbSIBk8Stw?e=1g90nN"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -818,7 +982,11 @@ const CourseCleverse = () => {
       case '17octaft':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb04f5jNgLviE3Gkxg?e=adGxYh" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgb04f5jNgLviE3Gkxg?e=adGxYh"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -839,7 +1007,11 @@ const CourseCleverse = () => {
       case '18octaft':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0u4vKnb5Od9bAQOg?e=RtGPhy" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgb0u4vKnb5Od9bAQOg?e=RtGPhy"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -856,7 +1028,11 @@ const CourseCleverse = () => {
       case '19octmor':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb05-JyZxSMPC6S_dg?e=eOZp3J" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgb05-JyZxSMPC6S_dg?e=eOZp3J"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -876,7 +1052,11 @@ const CourseCleverse = () => {
       case '20octmor':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb08R13x_J60dIwYvw?e=IkmKuv" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgb08R13x_J60dIwYvw?e=IkmKuv"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -895,7 +1075,11 @@ const CourseCleverse = () => {
       case '20octaft':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0AvAaOEk_OOuxeLg?e=CxChXC" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgb0AvAaOEk_OOuxeLg?e=CxChXC"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -916,7 +1100,11 @@ const CourseCleverse = () => {
       case '24octmor':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0lfEyIQUEvx-C4Pg?e=La56Y6" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgb0lfEyIQUEvx-C4Pg?e=La56Y6"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -933,7 +1121,11 @@ const CourseCleverse = () => {
       case '24octaft':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0mA5WnukkFqo9s0w?e=JI5EAs" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgb0mA5WnukkFqo9s0w?e=JI5EAs"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -950,7 +1142,11 @@ const CourseCleverse = () => {
       case '25octaft':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0oKgMdxIrdT0otfA?e=frzt58" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgb0oKgMdxIrdT0otfA?e=frzt58"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -967,7 +1163,11 @@ const CourseCleverse = () => {
       case '26octmor1':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0nRWr15JaKaTys_A?e=fx66YS" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgb0nRWr15JaKaTys_A?e=fx66YS"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -984,7 +1184,11 @@ const CourseCleverse = () => {
       case '26octmor2':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0pbgAxofClL1lzSw?e=ec49ps" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgb0pbgAxofClL1lzSw?e=ec49ps"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -1001,7 +1205,11 @@ const CourseCleverse = () => {
       case '26octaft1':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0qYlH1NDg9tcy_Fw?e=f8Lqla" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgb0qYlH1NDg9tcy_Fw?e=f8Lqla"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -1018,7 +1226,11 @@ const CourseCleverse = () => {
       case '26octaft2':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0rJ93fQR4MURqWSg?e=ccCge9" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgb0rJ93fQR4MURqWSg?e=ccCge9"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -1035,7 +1247,11 @@ const CourseCleverse = () => {
       case '27octmor':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0s6qbwDI-SHZ9gxw?e=EqcINh" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgb0s6qbwDI-SHZ9gxw?e=EqcINh"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -1056,7 +1272,11 @@ const CourseCleverse = () => {
       case '27octaft':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0tjhz4XyAoKWsOtg?e=GTNMlA" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgb0tjhz4XyAoKWsOtg?e=GTNMlA"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -1077,7 +1297,11 @@ const CourseCleverse = () => {
       case '30octmor':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb1D0IUdb4fHxL_OBQ?e=4Bar3K" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgb1D0IUdb4fHxL_OBQ?e=4Bar3K"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -1097,7 +1321,11 @@ const CourseCleverse = () => {
       case '30octaft':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb1CGIkyZC74Oc6XTQ?e=Qg1xO9" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgb1CGIkyZC74Oc6XTQ?e=Qg1xO9"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -1117,7 +1345,11 @@ const CourseCleverse = () => {
       case '31octmor':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb1BpMvyv-raI3Js2Q?e=wtYhk7" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgb1BpMvyv-raI3Js2Q?e=wtYhk7"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -1134,7 +1366,11 @@ const CourseCleverse = () => {
       case '31octaft':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb1FmETVnAyiUTPsOw?e=ewp6L8" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgb1FmETVnAyiUTPsOw?e=ewp6L8"
+              allowFullScreen
+            ></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
