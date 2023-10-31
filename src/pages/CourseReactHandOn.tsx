@@ -206,7 +206,11 @@ const CourseReactHandOn = () => {
     <div>
       <Layout>
         <Sider width={'20vW'} className={classes.sider} breakpoint="md">
-          <Menu mode="inline" onClick={(e) => setSelectedMenuItem(e.key)} style={{ height: '100%', borderRight: 0 }}>
+          <Menu
+            mode="inline"
+            onClick={(e) => setSelectedMenuItem(e.key)}
+            style={{ height: '100%', borderRight: 0, fontSize: '1.1vw' }}
+          >
             <Menu.Item key="document" icon={React.createElement(FileOutlined)}>
               Document
             </Menu.Item>
