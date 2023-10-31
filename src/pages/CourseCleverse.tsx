@@ -1,12 +1,42 @@
 import { Layout, Menu } from 'antd'
 import classes from './CourseCleverse.module.css'
-import { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import cleverse_logo from '../assets/cleverse_logo.png'
+import w1_logo from '../assets/w1_icon.svg'
+import w2_logo from '../assets/w2_icon.svg'
+import w3_logo from '../assets/w3_icon.svg'
+import w4_logo from '../assets/w4_icon.svg'
+import w6_logo from '../assets/w6_icon.svg'
+import w7_logo from '../assets/w7_icon.svg'
+import w8_logo from '../assets/w8_icon.svg'
+import { CommentOutlined } from '@ant-design/icons'
 
 const { Sider, Content } = Layout
 
 const CourseCleverse = () => {
   const [selectedMenuItem, setSelectedMenuItem] = useState('item0')
+  const [isFullScreen, setFullScreen] = useState(false)
+
+  const handlerFullScreen = () => {
+    return setFullScreen(true)
+  }
+
+  const handlerExitFullScreen = () => {
+    return setFullScreen(false)
+  }
+
+  useEffect(() => {
+    const handleEsc = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setFullScreen(false)
+      }
+    }
+    window.addEventListener('keydown', handleEsc)
+
+    return () => {
+      window.removeEventListener('keydown', handleEsc)
+    }
+  }, [])
 
   const componentSwitch = (key: string) => {
     switch (key) {
@@ -24,7 +54,20 @@ const CourseCleverse = () => {
       case '11sepaft':
         return (
           <div className={classes.videoContent}>
-            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgbxpZ-F3diRS9B5nxg?e=6ShjSX" allowFullScreen></iframe>
+            <iframe
+              className={`${isFullScreen ? classes.openFullScreen : null}`}
+              src="https://1drv.ms/v/s!An7xDCPOMleAgbxpZ-F3diRS9B5nxg?e=6ShjSX"
+              allowFullScreen
+            ></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
             <p>Foundation</p>
             <p>Basic Web Components / Initial Setup for Developers / Introduction to Terminal / JavaScript</p>
           </div>
@@ -33,6 +76,15 @@ const CourseCleverse = () => {
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgbxoMCPYOMJoOWrdUQ?e=RVFfya" allowFullScreen></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
             <p>Foundation</p>
             <p>
               JavaScript / Recap Exercise Solution / Array / Exercise (Array) / GIT 101 / Data Types / Loop / Exercise
@@ -44,6 +96,15 @@ const CourseCleverse = () => {
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgbxqkVWBn-HRRUuKKQ?e=PRCPhu" allowFullScreen></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
             <p>Foundation</p>
             <p>
               JavaScript / Recap Exercise Solution / Array / Exercise (Array) / GIT 101 / Data Types / Loop / Exercise
@@ -55,6 +116,15 @@ const CourseCleverse = () => {
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgbxv6uRZq9WtyuwjwA?e=tcoexJ" allowFullScreen></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
             <p>Foundation</p>
             <p>JavaScript / Callback Function / Exercise (Callback function) / Iterators / Exercise (Iterators)</p>
           </div>
@@ -63,6 +133,15 @@ const CourseCleverse = () => {
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgbxrxJE-s3uZc8N7yQ?e=WZmajJ" allowFullScreen></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
             <p>Foundation</p>
             <p>
               JavaScript / Objects / Exercise (Objects) / Destructuring / Spread and Rest operator / Foundation Exercise
@@ -73,6 +152,15 @@ const CourseCleverse = () => {
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgbxsamwAr48tBnmISw?e=ePdFUK" allowFullScreen></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
             <p>Foundation</p>
             <p>
               JavaScript / Objects / Exercise (Objects) / Destructuring / Spread and Rest operator / Foundation Exercise
@@ -83,6 +171,15 @@ const CourseCleverse = () => {
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgbxuT-irNx6edWACCA?e=nJEk7J" allowFullScreen></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
             <p>Foundation</p>
             <p>JavaScript / Foundation Exercise (cont.)</p>
           </div>
@@ -91,6 +188,15 @@ const CourseCleverse = () => {
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgbxtMKqHwgnlVwgAyQ?e=KnVcM7" allowFullScreen></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
             <p>Foundation</p>
             <p>JavaScript / Foundation Exercise (cont.)</p>
           </div>
@@ -99,6 +205,15 @@ const CourseCleverse = () => {
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgbxxcFixOe0NcN3SiQ?e=5xMWbh" allowFullScreen></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
             <p>Foundation</p>
             <p>JavaScript / Foundation Exercise (cont.)</p>
           </div>
@@ -107,6 +222,15 @@ const CourseCleverse = () => {
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgbxwjEdpvH4mri_coA?e=dMKHNB" allowFullScreen></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
             <p>Foundation</p>
             <p>JavaScript / Foundation Exercise (cont.)</p>
           </div>
@@ -115,6 +239,15 @@ const CourseCleverse = () => {
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgbxy9XUGHZB9HxjqpA?e=QR14Op" allowFullScreen></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
             <p>Foundation</p>
             <p>JavaScript / Foundation Exercise (cont.)</p>
           </div>
@@ -123,6 +256,15 @@ const CourseCleverse = () => {
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgbxz1QxmcFX7e-Pvgw?e=aSvjMP" allowFullScreen></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
             <p>Foundation</p>
             <p>JavaScript / Foundation Exercise (cont.)</p>
           </div>
@@ -133,6 +275,15 @@ const CourseCleverse = () => {
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgbxfoixuweNVOjeWcw?e=pHb8Gp" allowFullScreen></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
             <p>Front End - Essential</p>
             <p>
               HTML (Elements / Forms / Hands-on 1) / CSS (Selectors / Box Model / Common CSS properties / Hands-on 2)
@@ -143,6 +294,15 @@ const CourseCleverse = () => {
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgbxisZlr5DsUfP76jw?e=eszy2s" allowFullScreen></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
             <p>Front End - Essential</p>
             <p>
               HTML (Elements / Forms / Hands-on 1) / CSS (Selectors / Box Model / Common CSS properties / Hands-on 2)
@@ -153,6 +313,15 @@ const CourseCleverse = () => {
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgbxgbOkSLtu_xseDEg?e=6kRgdd" allowFullScreen></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
             <p>Front End - Essential</p>
             <p>CSS / Combinator selector / CSS Layout (Flexbox and Grid) / Hands-on 3</p>
           </div>
@@ -161,6 +330,15 @@ const CourseCleverse = () => {
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgbxhGJFknAHtMaldyw?e=yJCG6U" allowFullScreen></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
             <p>Front End - Essential</p>
             <p>CSS / Combinator selector / CSS Layout (Flexbox and Grid) / Hands-on 3</p>
           </div>
@@ -169,6 +347,15 @@ const CourseCleverse = () => {
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgbxkQwpzytdbMiSd8w?e=GARTnv" allowFullScreen></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
             <p>Front End - Essential</p>
             <p>CSS / Responsive / Advance CSS and CSS Frameworks / Hands-on 4</p>
           </div>
@@ -177,6 +364,15 @@ const CourseCleverse = () => {
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgbxlIiLXYzbsxo9vyg?e=RT0mmf" allowFullScreen></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
             <p>Front End - Essential</p>
             <p>JS DOM / DOM manipulation / Event handler / Hands-on 5 / Hands-on 5 Solution explaination</p>
           </div>
@@ -185,6 +381,15 @@ const CourseCleverse = () => {
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgbxjpXXrbNoo4X2wlg?e=gCeimt" allowFullScreen></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
             <p>Front End - Essential</p>
             <p>JS DOM / DOM manipulation / Event handler / Hands-on 5 / Hands-on 5 Solution explaination</p>
           </div>
@@ -193,6 +398,15 @@ const CourseCleverse = () => {
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgbxmnpR6pJZ94K6cHA?e=cobibo" allowFullScreen></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
             <p>Front End - Essential</p>
             <p>
               JavaScript Promise / JS DOM (Fetch API Method (GET, POST etc.) / HTTP Message (Req, Res) / JSON Hands-on
@@ -204,6 +418,15 @@ const CourseCleverse = () => {
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgbxn-pmffEEevfYEwg?e=K1cZBI" allowFullScreen></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
             <p>Front End - Essential</p>
             <p>
               JavaScript Promise / JS DOM (Fetch API Method (GET, POST etc.) / HTTP Message (Req, Res) / JSON Hands-on
@@ -217,6 +440,15 @@ const CourseCleverse = () => {
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0U7IslUhbMpELIBA?e=BHFT2P" allowFullScreen></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
             <p>Front End - Essential</p>
             <p>JS DOM / Hands-on 6 Solution explanation / Auth / Hands-on 7 / Tech Test (1.5 hrs)</p>
           </div>
@@ -225,6 +457,15 @@ const CourseCleverse = () => {
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0TYBtRLIwItQA9xw?e=y17G7S" allowFullScreen></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
             <p>Front End - Essential</p>
             <p>JS DOM / Hands-on 6 Solution explanation / Auth / Hands-on 7 / Tech Test (1.5 hrs)</p>
           </div>
@@ -233,6 +474,15 @@ const CourseCleverse = () => {
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0VYJKOaW7fi75YgA?e=srG70A" allowFullScreen></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
             <p>TypeScript</p>
             <p>TypeScript / Introduction, setup / Types / Exercise</p>
           </div>
@@ -241,6 +491,15 @@ const CourseCleverse = () => {
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0WAa-9sPl5odONyA?e=D0hr0V" allowFullScreen></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
             <p>TypeScript</p>
             <p>TypeScript / Introduction, setup / Types / Exercise</p>
           </div>
@@ -249,6 +508,15 @@ const CourseCleverse = () => {
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0Xp23SujwrdIcKPQ?e=BIqmwa" allowFullScreen></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
             <p>TypeScript</p>
             <p>TypeScript / Interface / Exercise</p>
           </div>
@@ -257,6 +525,15 @@ const CourseCleverse = () => {
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0ZH0JZqNOWc9clHw?e=LFtVDd" allowFullScreen></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
             <p>TypeScript</p>
             <p>TypeScript / Generics</p>
           </div>
@@ -265,6 +542,15 @@ const CourseCleverse = () => {
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0YyaSHV78bPche3Q?e=UWGh2J" allowFullScreen></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
             <p>TypeScript</p>
             <p>Tech Test Solution + JavaScript Fundamental Review</p>
           </div>
@@ -273,6 +559,15 @@ const CourseCleverse = () => {
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0ag7166P0l2wWTsA?e=RkklXv" allowFullScreen></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
             <p>Front End - Framework</p>
             <p>
               React (Introducing to React / Install React project / Walkthrough project files and structure / React
@@ -285,6 +580,15 @@ const CourseCleverse = () => {
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0cg4Z9-TbYqR6N7w?e=QTwGT5" allowFullScreen></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
             <p>Front End - Framework</p>
             <p>
               React (Introducing to React / Install React project / Walkthrough project files and structure / React
@@ -299,6 +603,15 @@ const CourseCleverse = () => {
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0barJcNVJNAjOzdg?e=iBnXjB" allowFullScreen></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
             <p>Front End - Framework</p>
             <p>React / Props / Rendering List / Event handler / Hands-on 8 / Hands-on 8 Solution</p>
           </div>
@@ -307,6 +620,15 @@ const CourseCleverse = () => {
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0dsDawZXOYyA7YvA?e=nPTr1k" allowFullScreen></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
             <p>Front End - Framework</p>
             <p>React / Props / Rendering List / Event handler / Hands-on 8 / Hands-on 8 Solution</p>
           </div>
@@ -315,6 +637,15 @@ const CourseCleverse = () => {
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0eYN6KTjYmPYsCAQ?e=8zTBNa" allowFullScreen></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
             <p>Front End - Framework</p>
             <p>React / useState / Mini Exercise 3 / useRef / Form input / Hands-on 9</p>
           </div>
@@ -323,6 +654,15 @@ const CourseCleverse = () => {
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0fCyOWlixRSO872g?e=Y58l2D" allowFullScreen></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
             <p>Front End - Framework</p>
             <p>React / useState / Mini Exercise 3 / useRef / Form input / Hands-on 9</p>
           </div>
@@ -331,6 +671,15 @@ const CourseCleverse = () => {
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0gp5Rj-BQsdRpT8g?e=ZJoAVg" allowFullScreen></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
             <p>Front End - Framework</p>
             <p>React / Hands-on 9 Solution / DTO / useEffect / Fetch data / Mini Exercise 4 / Custom hooks</p>
           </div>
@@ -339,6 +688,15 @@ const CourseCleverse = () => {
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0hKxmAweJuabiAUA?e=TTux2N" allowFullScreen></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
             <p>Front End - Framework</p>
             <p>React / Router / Mini Exercise 5 / Mini Exercise 6</p>
           </div>
@@ -347,6 +705,15 @@ const CourseCleverse = () => {
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0j1Mv91IZCKX5veA?e=684BCH" allowFullScreen></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
             <p>Front End - Framework</p>
             <p>React / Router / Mini Exercise 5 / Mini Exercise 6</p>
           </div>
@@ -355,6 +722,15 @@ const CourseCleverse = () => {
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0i6u-qcyDwoUFTNA?e=hGdtuo" allowFullScreen></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
             <p>Front End - Framework</p>
             <p>React / Context</p>
           </div>
@@ -363,6 +739,15 @@ const CourseCleverse = () => {
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0knFPux9cATkNLQQ?e=KMZi11" allowFullScreen></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
             <p>Front End - Framework</p>
             <p>React / Context</p>
           </div>
@@ -373,6 +758,15 @@ const CourseCleverse = () => {
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb00ZjbZue4YNpID9g?e=163VF1" allowFullScreen></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
             <p>Back-end Software Engineering Fundamental - Network</p>
             <p>
               Prologue: Abstraction + packages.json / Docker installation / pnpm installation / HTTP Protocol /
@@ -384,6 +778,15 @@ const CourseCleverse = () => {
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0BmT6p6PCJ5hid6Q?e=B8wbmZ" allowFullScreen></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
             <p>Back-end Software Engineering Fundamental - Network</p>
             <p>
               Prologue: Abstraction + packages.json / Docker installation / pnpm installation / HTTP Protocol /
@@ -395,6 +798,15 @@ const CourseCleverse = () => {
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb03DsrYfbSIBk8Stw?e=1g90nN" allowFullScreen></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
             <p>Back-end Software Engineering Fundamental</p>
             <p>
               Query string exercise solution / HTTP Protocol (Cont.) / Params / HTTP-Version / Response / Status-Code [
@@ -407,6 +819,15 @@ const CourseCleverse = () => {
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb04f5jNgLviE3Gkxg?e=adGxYh" allowFullScreen></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
             <p>Back-end Software Engineering Fundamental</p>
             <p>
               Query string exercise solution / HTTP Protocol (Cont.) / Params / HTTP-Version / Response / Status-Code [
@@ -419,6 +840,15 @@ const CourseCleverse = () => {
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0u4vKnb5Od9bAQOg?e=RtGPhy" allowFullScreen></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
             <p>Back-end Software Engineering Fundamental</p>
             <p>Express initialization, recap pnpm & typescript / PUT/PATCH/DELETE TODO</p>
           </div>
@@ -427,6 +857,15 @@ const CourseCleverse = () => {
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb05-JyZxSMPC6S_dg?e=eOZp3J" allowFullScreen></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
             <p>Back-end Software Engineering Fundamental</p>
             <p>
               OOP Day 1 / Class (methods, attribute, public / private) / Refactor a single-file TODO server / TODO with
@@ -438,6 +877,15 @@ const CourseCleverse = () => {
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb08R13x_J60dIwYvw?e=IkmKuv" allowFullScreen></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
             <p>Back-end Software Engineering Fundamental</p>
             <p>
               Why we need to write express.js by OOP way / OOP Day 2 / Interface & Inheritance / Hands-on #2: TODO List
@@ -448,6 +896,15 @@ const CourseCleverse = () => {
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0AvAaOEk_OOuxeLg?e=CxChXC" allowFullScreen></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
             <p>Back-end Software Engineering Fundamental</p>
             <p>
               Why we need to write express.js by OOP way / OOP Day 2 / Interface & Inheritance / Hands-on #2: TODO List
@@ -460,72 +917,235 @@ const CourseCleverse = () => {
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0lfEyIQUEvx-C4Pg?e=La56Y6" allowFullScreen></iframe>
-            <p>Back-endDatabase</p>
-            <p></p>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
+            <p>Back-end Database</p>
+            <p>Docker & Database คืออะไร / SQL Day 1 - DDL</p>
           </div>
         )
       case '24octaft':
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0mA5WnukkFqo9s0w?e=JI5EAs" allowFullScreen></iframe>
-            <p>Back-endDatabase</p>
-            <p></p>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
+            <p>Back-end Database</p>
+            <p>Docker & Database คืออะไร / SQL Day 1 - DDL</p>
           </div>
         )
       case '25octaft':
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0oKgMdxIrdT0otfA?e=frzt58" allowFullScreen></iframe>
-            <p>Back-endDatabase</p>
-            <p></p>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
+            <p>Back-end Database</p>
+            <p>SQL Day 2 - DML / Hands-on #3: SQL Command</p>
           </div>
         )
       case '26octmor1':
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0nRWr15JaKaTys_A?e=fx66YS" allowFullScreen></iframe>
-            <p>Back-endDatabase</p>
-            <p></p>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
+            <p>Back-end Database</p>
+            <p>ER Diagram, 1-1, 1-many, and many-to-many / Hands-on #4: Drawing an ER Diagram</p>
           </div>
         )
       case '26octmor2':
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0pbgAxofClL1lzSw?e=ec49ps" allowFullScreen></iframe>
-            <p>Back-endDatabase</p>
-            <p></p>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
+            <p>Back-end Database</p>
+            <p>ER Diagram, 1-1, 1-many, and many-to-many / Hands-on #4: Drawing an ER Diagram</p>
           </div>
         )
       case '26octaft1':
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0qYlH1NDg9tcy_Fw?e=f8Lqla" allowFullScreen></iframe>
-            <p>Back-endDatabase</p>
-            <p></p>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
+            <p>Back-end Database</p>
+            <p>ER Diagram, 1-1, 1-many, and many-to-many / Hands-on #4: Drawing an ER Diagram</p>
           </div>
         )
       case '26octaft2':
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0rJ93fQR4MURqWSg?e=ccCge9" allowFullScreen></iframe>
-            <p>Back-endDatabase</p>
-            <p></p>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
+            <p>Back-end Database</p>
+            <p>ER Diagram, 1-1, 1-many, and many-to-many / Hands-on #4: Drawing an ER Diagram</p>
           </div>
         )
       case '27octmor':
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0s6qbwDI-SHZ9gxw?e=EqcINh" allowFullScreen></iframe>
-            <p>Back-endDatabase</p>
-            <p></p>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
+            <p>Back-end Database</p>
+            <p>
+              Connect to Database with Prisma Why and What is ORM? / SQL vs. ORM / What is Prisma? / Setup repo with
+              Prisma (npm install packages + generate and migrate + COURSE entity) / Basic Prisma DML method used with
+              express (.findMany(), .findUnique(), .create(), .update(), .delete())
+            </p>
           </div>
         )
       case '27octaft':
         return (
           <div className={classes.videoContent}>
             <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb0tjhz4XyAoKWsOtg?e=GTNMlA" allowFullScreen></iframe>
-            <p>Back-endDatabase</p>
-            <p></p>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
+            <p>Back-end Database</p>
+            <p>
+              Connect to Database with Prisma Why and What is ORM? / SQL vs. ORM / What is Prisma? / Setup repo with
+              Prisma (npm install packages + generate and migrate + COURSE entity) / Basic Prisma DML method used with
+              express (.findMany(), .findUnique(), .create(), .update(), .delete())
+            </p>
+          </div>
+        )
+      case '30octmor':
+        return (
+          <div className={classes.videoContent}>
+            <iframe src="" allowFullScreen></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
+            <p>Back-end Database</p>
+            <p>
+              Prisma (cont.) / Abstraction concept, interface (IRepository) / (Repository , Entities , Handlers) /
+              Teacher entity (without keeping password)
+            </p>
+          </div>
+        )
+      case '30octaft':
+        return (
+          <div className={classes.videoContent}>
+            <iframe src="" allowFullScreen></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
+            <p>Back-end Database</p>
+            <p>
+              Prisma (cont.) / Abstraction concept, interface (IRepository) / (Repository , Entities , Handlers) /
+              Teacher entity (without keeping password)
+            </p>
+          </div>
+        )
+      case '31octmor':
+        return (
+          <div className={classes.videoContent}>
+            <iframe src="" allowFullScreen></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
+            <p>Back-end Database</p>
+            <p>Basic Cryptography BEST PRACTICE / Hash / JWT / Library installation - bcrypt</p>
+          </div>
+        )
+      case '31octaft':
+        return (
+          <div className={classes.videoContent}>
+            <iframe src="" allowFullScreen></iframe>
+            <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
+              Full Screen
+            </button>
+            <button
+              className={`${isFullScreen ? classes.exitFullScreenButton : classes.exitFullScreenButtonHide}`}
+              onClick={handlerExitFullScreen}
+            >
+              Exit Full Screen
+            </button>
+            <p>Back-end Database</p>
+            <p>Basic Cryptography BEST PRACTICE / Hash / JWT / Library installation - bcrypt</p>
           </div>
         )
 
@@ -585,9 +1205,20 @@ const CourseCleverse = () => {
           <Menu
             mode="inline"
             onClick={(e) => setSelectedMenuItem(e.key)}
-            style={{ height: '100%', borderRight: 0, fontSize: '1.2vw' }}
+            style={{ height: '100%', borderRight: 0, fontSize: '1.1vw' }}
           >
-            <Menu.SubMenu title="Week 1" key="week1">
+            <Menu.SubMenu
+              title="Week 1"
+              key="week1"
+              icon={
+                <img
+                  src={w1_logo}
+                  style={{
+                    width: '18px',
+                  }}
+                />
+              }
+            >
               <Menu.SubMenu title="11-SEP" key="11sep">
                 <Menu.Item key="11sepaft">Afternoon</Menu.Item>
               </Menu.SubMenu>
@@ -612,7 +1243,18 @@ const CourseCleverse = () => {
               </Menu.SubMenu>
             </Menu.SubMenu>
 
-            <Menu.SubMenu title="Week 2" key="week2">
+            <Menu.SubMenu
+              title="Week 2"
+              key="week2"
+              icon={
+                <img
+                  src={w2_logo}
+                  style={{
+                    width: '18px',
+                  }}
+                />
+              }
+            >
               <Menu.SubMenu title="18-SEP" key="18sep">
                 <Menu.Item key="18sepmor">Morning</Menu.Item>
                 <Menu.Item key="18sepaft">Afternoon</Menu.Item>
@@ -634,7 +1276,18 @@ const CourseCleverse = () => {
               </Menu.SubMenu>
             </Menu.SubMenu>
 
-            <Menu.SubMenu title="Week 3" key="week3">
+            <Menu.SubMenu
+              title="Week 3"
+              key="week3"
+              icon={
+                <img
+                  src={w3_logo}
+                  style={{
+                    width: '18px',
+                  }}
+                />
+              }
+            >
               <Menu.SubMenu title="25-SEP" key="25sep">
                 <Menu.Item key="25sepmor">Morning</Menu.Item>
                 <Menu.Item key="25sepaft">Afternoon</Menu.Item>
@@ -656,7 +1309,18 @@ const CourseCleverse = () => {
               </Menu.SubMenu>
             </Menu.SubMenu>
 
-            <Menu.SubMenu title="Week 4" key="week4">
+            <Menu.SubMenu
+              title="Week 4"
+              key="week4"
+              icon={
+                <img
+                  src={w4_logo}
+                  style={{
+                    width: '18px',
+                  }}
+                />
+              }
+            >
               <Menu.SubMenu title="2-OCT" key="2oct">
                 <Menu.Item key="2octmor">Morning</Menu.Item>
                 <Menu.Item key="2octaft">Afternoon</Menu.Item>
@@ -678,7 +1342,18 @@ const CourseCleverse = () => {
               </Menu.SubMenu>
             </Menu.SubMenu>
 
-            <Menu.SubMenu title="Week 6" key="week6">
+            <Menu.SubMenu
+              title="Week 6"
+              key="week6"
+              icon={
+                <img
+                  src={w6_logo}
+                  style={{
+                    width: '18px',
+                  }}
+                />
+              }
+            >
               <Menu.SubMenu title="16-OCT" key="16oct">
                 <Menu.Item key="16octmor">Morning</Menu.Item>
                 <Menu.Item key="16octaft">Afternoon</Menu.Item>
@@ -699,7 +1374,18 @@ const CourseCleverse = () => {
               </Menu.SubMenu>
             </Menu.SubMenu>
 
-            <Menu.SubMenu title="Week 7" key="week7">
+            <Menu.SubMenu
+              title="Week 7"
+              key="week7"
+              icon={
+                <img
+                  src={w7_logo}
+                  style={{
+                    width: '18px',
+                  }}
+                />
+              }
+            >
               <Menu.SubMenu title="24-OCT" key="24oct">
                 <Menu.Item key="24octmor">Morning</Menu.Item>
                 <Menu.Item key="24octaft">Afternoon</Menu.Item>
@@ -719,7 +1405,29 @@ const CourseCleverse = () => {
               </Menu.SubMenu>
             </Menu.SubMenu>
 
-            <Menu.SubMenu title="Industry Talk" key="industryTalk">
+            <Menu.SubMenu
+              title="Week 8"
+              key="week8"
+              icon={
+                <img
+                  src={w8_logo}
+                  style={{
+                    width: '18px',
+                  }}
+                />
+              }
+            >
+              <Menu.SubMenu title="30-OCT" key="30oct">
+                <Menu.Item key="30octmor">Morning</Menu.Item>
+                <Menu.Item key="30octaft">Afternoon</Menu.Item>
+              </Menu.SubMenu>
+              <Menu.SubMenu title="31-OCT" key="31oct">
+                <Menu.Item key="31octmor">Morning</Menu.Item>
+                <Menu.Item key="31octaft">Afternoon</Menu.Item>
+              </Menu.SubMenu>
+            </Menu.SubMenu>
+
+            <Menu.SubMenu title="Industry Talk" key="industryTalk" icon={React.createElement(CommentOutlined)}>
               <Menu.Item key="industrytalk1">Industry Talk 1 - By Prem (Cleverse)</Menu.Item>
               <Menu.Item key="industrytalk2">Industry Talk 2 - By Wichai (Wisesight)</Menu.Item>
               <Menu.Item key="industrytalk3">

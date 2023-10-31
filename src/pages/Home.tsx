@@ -20,7 +20,7 @@ const Home = () => {
               <div className={classes.cardTextUp}>
                 <p className={classes.projectName}>Cleverse Academy</p>
                 <p className={classes.description}>Live Records</p>
-                <p className={classes.description}>Update 27-Oct-2023</p>
+                <p className={classes.description}>Update 31-Oct-2023</p>
                 <img className={!isLoggedIn ? classes.lockIconActive : classes.lockIconDeactive} src={lock_Icon} />
               </div>
             </div>

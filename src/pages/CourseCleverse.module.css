@@ -1,4 +1,7 @@
 .content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   height: 90vh;
 }
 
@@ -8,13 +11,35 @@
 }
 
 .videoContent {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
 }
 
 .videoContent iframe {
+  /* width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 0; */
   height: 70vh; /* Set height to 100% of the viewport height */
   width: 60vw; /* Set width to 100% of the viewport width */
   border: none; /* Remove default border */
+}
+
+.videoContent .openFullScreen {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 0;
 }
 
 .landingContent {
@@ -33,6 +58,36 @@
   margin-left: auto;
   margin-right: auto;
   width: 25vw;
+}
+
+.videoContent .fullScreenButton {
+  width: 100px;
+  background-color: #4e9aff;
+  color: #ffffff;
+  border: none;
+  padding: 8px;
+}
+
+.videoContent .exitFullScreenButton {
+  position: absolute;
+  height: 35px;
+  top: 10px;
+  right: 10px;
+  background-color: #292827;
+  color: #ffffff;
+  border: none;
+}
+
+.videoContent .fullScreenButton:hover {
+  cursor: pointer;
+}
+
+.videoContent .exitFullScreenButton:hover {
+  cursor: pointer;
+}
+
+.videoContent .exitFullScreenButtonHide {
+  display: none;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -54,5 +109,16 @@
 
   .landingContent p {
     font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  /* For mobile: */
+  .videoContent .fullScreenButton {
+    display: none;
+  }
+
+  .videoContent .exitFullScreenButton {
+    display: none;
   }
 }
