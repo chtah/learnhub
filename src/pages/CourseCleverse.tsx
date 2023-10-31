@@ -1077,7 +1077,7 @@ const CourseCleverse = () => {
       case '30octmor':
         return (
           <div className={classes.videoContent}>
-            <iframe src="" allowFullScreen></iframe>
+            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb1D0IUdb4fHxL_OBQ?e=4Bar3K" allowFullScreen></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -1097,7 +1097,7 @@ const CourseCleverse = () => {
       case '30octaft':
         return (
           <div className={classes.videoContent}>
-            <iframe src="" allowFullScreen></iframe>
+            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb1CGIkyZC74Oc6XTQ?e=Qg1xO9" allowFullScreen></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -1117,7 +1117,7 @@ const CourseCleverse = () => {
       case '31octmor':
         return (
           <div className={classes.videoContent}>
-            <iframe src="" allowFullScreen></iframe>
+            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb1BpMvyv-raI3Js2Q?e=wtYhk7" allowFullScreen></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
@@ -1134,7 +1134,7 @@ const CourseCleverse = () => {
       case '31octaft':
         return (
           <div className={classes.videoContent}>
-            <iframe src="" allowFullScreen></iframe>
+            <iframe src="https://1drv.ms/v/s!An7xDCPOMleAgb1FmETVnAyiUTPsOw?e=ewp6L8" allowFullScreen></iframe>
             <button className={classes.fullScreenButton} onClick={handlerFullScreen}>
               Full Screen
             </button>
