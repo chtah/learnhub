@@ -12,6 +12,7 @@ import w8_logo from '../assets/w8_icon.svg'
 import { CommentOutlined } from '@ant-design/icons'
 
 const { Sider, Content } = Layout
+export const updateDate = 'Update 27-October-2023' //For update date
 
 const CourseCleverse = () => {
   const [selectedMenuItem, setSelectedMenuItem] = useState('item0')
@@ -44,7 +45,7 @@ const CourseCleverse = () => {
         return (
           <div className={classes.landingContent}>
             <h1>Cleverse Academy Live Records</h1>
-            <h2>Update 27-October-2023</h2>
+            <h2>{updateDate}</h2>
             <p>Full Screen by right click on video and selected -Show all controls-</p>
             <img src={cleverse_logo} />
           </div>
