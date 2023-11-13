@@ -5,9 +5,16 @@ import lock_Icon from '../assets/lock_icon.svg'
 import { Link } from 'react-router-dom'
 import { useAuth } from '../providers/AuthProvider'
 import { Toaster } from 'react-hot-toast'
-import { updateDate } from './CourseCleverse'
+import useCourseGet from '../hooks/useCourseGet'
 
 const Home = () => {
+  const { newCourse } = useCourseGet()
+
+  let updateDate = ''
+  if (newCourse !== null) {
+    updateDate = newCourse.course_update_date
+  }
+
   const { isLoggedIn } = useAuth()
   return (
     <div>
@@ -21,7 +28,7 @@ const Home = () => {
               <div className={classes.cardTextUp}>
                 <p className={classes.projectName}>Cleverse Academy</p>
                 <p className={classes.description}>Live Records</p>
-                <p className={classes.description}>{updateDate}</p>
+                <p className={classes.description}>Update {updateDate}</p>
                 <img className={!isLoggedIn ? classes.lockIconActive : classes.lockIconDeactive} src={lock_Icon} />
               </div>
             </div>
