@@ -81,7 +81,6 @@ const CourseCleverse = () => {
             children:
               newCourse &&
               newCourse.menu[i].submenu[j].topic.map((topic, k) => {
-                //const videoUrl = String(newCourse.menu[i].submenu[j].topic[k].topic_url)
                 return {
                   key: `${i},${j},${k}`,
                   label: `${topic.topic_title}`,
